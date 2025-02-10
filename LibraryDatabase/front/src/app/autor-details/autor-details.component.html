@@ -1,0 +1,22 @@
+<header>
+    <h1>Szczegóły autora</h1>
+  </header>
+  <form class="book-details">
+    <label for="imie">Imię:</label>
+    <input type="text" id="imie" name="imie" [(ngModel)]="autor.imie" [readonly]="!isEditMode">
+    
+    <label for="nazwisko">Nazwisko:</label>
+    <input type="text" id="nazwisko" name="nazwisko" [(ngModel)]="autor.nazwisko" [readonly]="!isEditMode">
+    
+    <label for="rokUrodzenia">Rok urodzenia:</label>
+    <input type="text" id="rokUrodzenia" name="rokUrodzenia" [(ngModel)]="autor.rokUrodzenia" [readonly]="!isEditMode">
+    
+    <button *ngIf="authService.isAdmin() && !isEditMode" type="button" (click)="toggleEditMode()">Edytuj</button>
+    <button *ngIf="authService.isAdmin() && isEditMode" type="button" (click)="saveChanges()">Akceptuj</button>
+    <button *ngIf="authService.isAdmin() && isEditMode" type="button" (click)="cancelEdit()">Anuluj</button>
+    <button *ngIf="authService.isAdmin() && !isEditMode" type="button" (click)="deleteAutor(autor.autorID)">Usuń</button>
+  </form>
+  <div>
+    <header><h1>Książki autora</h1></header>
+    <book-list [booksInput]="books" [mode]="'autor'" [id]="autor.autorID"></book-list>
+  </div>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista Książek</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="login-buttons">
+      <button>Wyloguj</button>
+      <button>Ulubione</button>
+    </div>
+    <div class="language-button">
+      <button>English</button>
+      <button>Autorzy</button>
+      <button>Kategorie</button>
+    </div>
+    <h1>Przechowywalnia informacji o książkach</h1>
+    <input type="text" placeholder="Szukaj książki">
+    <select>
+        <option value="">Filtruj kategorię</option>
+        <option value="">Przygodowa</option>
+        <option value="">Horror</option>
+    </select>
+    <button>Wyszukaj</button>
+    <h2>
+    <button>Dodaj kategorię</button>
+    <button>Dodaj książkę</button>
+    <button>Dodaj autora</button>
+    </h2>
+  </header>
+  
+  <main>
+    <header>
+      <h1>Dodaj Autora</h1>
+    </header>
+    <form class="book-details">
+      <label for="name">Imię:</label>
+      <input type="text" id="name" name="name">
+      
+      <label for="surname">Nazwisko:</label>
+      <input type="text" id="surname" name="surname">
+
+      <label for="year">Rok urodzenia:</label>
+      <input type="text" id="year" name="year">
+      
+      <button type="button">Anuluj</button>
+      <button type="button">Zapisz</button>
+    </form>
+  </main>
+  <footer>
+    Strona umożliwiająca dodawanie książek do polubionych, wyszukiwanie informacji o nich
+  </footer>
+</body>
+</html>

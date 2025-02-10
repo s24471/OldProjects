@@ -1,0 +1,18 @@
+<form class="book-details"  [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <label>Login</label>
+    <input type="text" formControlName="login" placeholder="Login">
+    <div></div>
+    <label>Email</label>
+    <input type="text" formControlName="email" placeholder="Email">
+    <div></div>
+    <label>Hasło</label>
+    <input type="password" formControlName="haslo" placeholder="Hasło">
+    <div></div>
+    <label>Imie</label>
+    <input type="text" formControlName="imie" placeholder="Imie">
+    <div></div>
+    <label>Nazwisko</label>
+    <input type="text" formControlName="nazwisko" placeholder="Nazwisko">
+    <div></div>
+    <button type="submit">Zarejestruj się</button>    
+</form>

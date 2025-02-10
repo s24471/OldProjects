@@ -1,0 +1,20 @@
+<header>
+    <h1>Szczegóły Kategorii</h1>
+  </header>
+  <form class="book-details">
+  
+    <label for="nazwaKategorii">Kategoria:</label>
+    <input type="text" id="nazwaKategorii" name="nazwaKategorii" [(ngModel)]="kategoria.nazwaKategorii" [readonly]="!isEditMode">
+  
+    <label for="rokUtworzenia">rokUtworzenia:</label>
+    <input type="number" id="rokUtworzenia" name="rokUtworzenia" [(ngModel)]="kategoria.rokUtworzenia" [readonly]="!isEditMode">
+    <div></div>
+    <button *ngIf="authService.isAdmin() && !isEditMode" type="button" (click)="toggleEditMode()">Edytuj</button>
+    <button *ngIf="isEditMode" type="button" (click)="saveChanges()">Akceptuj</button>
+    <button *ngIf="isEditMode" type="button" (click)="cancelEdit()">Anuluj</button>
+    <button *ngIf="authService.isAdmin() && !isEditMode" type="button" (click)="deleteCategory(kategoria.kategoriaID)">Usuń</button>
+  </form>
+  <div>
+    <header><h1>Książki Kategorii</h1></header>
+    <book-list [booksInput]="books" [mode]="'category'" [id]="kategoria.kategoriaID"></book-list>
+  </div>

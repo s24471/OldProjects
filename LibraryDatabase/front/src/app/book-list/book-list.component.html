@@ -1,0 +1,27 @@
+<div>
+  <header>
+    <h1>Tytuł | Kategoria | Autor</h1>   
+  </header>
+  <div class="book-list">
+    <app-book *ngFor="let book of books" 
+              [book]="book"
+              (delete)="onDelete(book)"
+              (favorite)="onFavorite(book)"
+              (details)="onDetails(book)"
+              (removeFromFavorites)="onRemoveFromFavorites(book)"
+              >
+    </app-book>
+  </div>
+  <div class="pagination">
+    <button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalItems / itemsPerPage | ceil }}</span>
+    <button (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === (totalItems / itemsPerPage | ceil)">Next</button>
+    <label for="pageSize">Books per page:</label>
+    <select id="pageSize" (change)="onPageSizeChange($event)">
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="15">15</option>
+    </select>
+    
+  </div>
+</div>

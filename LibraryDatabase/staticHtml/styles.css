@@ -1,0 +1,135 @@
+body,
+h1,
+h2,
+p,
+input,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+header {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+select,
+button {
+  padding: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+main {
+  width: 80%;
+  margin: 20px 0;
+  background-color: #ccc;
+  padding: 20px;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+  gap: 20px;
+}
+
+.book {
+  border: 1px solid #888;
+  padding: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.login-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.language-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.book-details {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #888;
+  margin-top: 20px;
+}
+
+.book-details label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.book-details input[type="text"] {
+  width: calc(100% - 12px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.book-details button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.book-details button:hover {
+  background-color: #555;
+}
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  margin: 0 4px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  color: #333;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.pagination button:hover {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+.pagination button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

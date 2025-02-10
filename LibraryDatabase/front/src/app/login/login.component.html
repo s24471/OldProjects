@@ -1,0 +1,9 @@
+<form class="book-details" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <label>Login</label>
+    <input type="text" formControlName="login">
+    <div></div>
+    <label>Password</label>
+    <input type="password" formControlName="password">
+    <div></div>
+    <button type="submit">Zaloguj</button>
+</form>

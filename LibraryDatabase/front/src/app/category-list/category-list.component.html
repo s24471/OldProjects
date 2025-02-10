@@ -1,0 +1,23 @@
+    <header>
+      <h1>Lista kategorii </h1>   
+    </header>  
+    <div class="book-list">
+        <app-category *ngFor="let kategoria of kategorie" 
+                  [kategoria]="kategoria"
+                  (edit)="onEdit(kategoria)"
+                  (delete)="onDelete(kategoria)"
+                  (details)="onDetails(kategoria)">
+        </app-category>
+      </div>
+      <div class="pagination">
+        <button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+        <span>Page {{ currentPage }} of {{ totalItems / itemsPerPage | ceil }}</span>
+        <button (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === (totalItems / itemsPerPage | ceil)">Next</button>
+        <label for="pageSize">Books per page:</label>
+        <select id="pageSize" (change)="onPageSizeChange($event)">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+        </select>
+        
+      </div>

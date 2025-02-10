@@ -1,0 +1,27 @@
+<header>
+<div class="login-buttons">
+  <button *ngIf="authService.isLoggedIn()" (click)="logout()">Wyloguj</button>
+  <button *ngIf="!authService.isLoggedIn()" routerLink="/login">Zaloguj</button>
+  <button *ngIf="!authService.isLoggedIn()" routerLink="/register">Zarejestruj</button>
+  <button *ngIf="authService.isLoggedIn()" routerLink="/favourites">Ulubione</button>
+  </div>
+  <div class="language-button">
+    <button routerLink="/home">Home</button>
+    <button routerLink="/autor-list">Autorzy</button>
+    <button routerLink="/category-list">Kategorie</button>
+    <button *ngIf="authService.isAdmin()" routerLink="/user-list">Użytkownicy</button>
+  </div>
+  <div>_________________________________</div>
+  <h1>Przechowywalnia informacji o książkach</h1>
+  <!-- <input type="text" placeholder="Szukaj książki">
+  <select>
+    <option value="none">Filtruj kategorię</option>
+    <option *ngFor="let category of categories" [value]="category.nazwaKategorii">{{ category.nazwaKategorii}}</option>
+  </select>
+  <button>Wyszukaj</button> -->
+  <h2>
+  <button *ngIf="authService.isAdmin()" routerLink="/category-add">Dodaj kategorię</button>
+  <button *ngIf="authService.isAdmin()" routerLink="/book-add">Dodaj książkę</button>
+  <button *ngIf="authService.isAdmin()" routerLink="/autor-add">Dodaj autora</button>
+  </h2>
+  </header>

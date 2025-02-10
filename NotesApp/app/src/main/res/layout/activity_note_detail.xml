@@ -1,0 +1,90 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NoteDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/edit_note_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Title"
+            android:padding="16dp" />
+
+        <EditText
+            android:id="@+id/edit_note_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Content"
+            android:padding="16dp"
+            android:gravity="top"
+            android:minLines="10" />
+
+        <Button
+            android:id="@+id/button_add_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Photo" />
+
+        <ImageView
+            android:id="@+id/note_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/button_remove_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove Photo"
+            android:visibility="gone"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/button_add_voice_recording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Voice Recording"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/button_remove_voice_recording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remove Voice Recording"
+            android:visibility="gone"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/voice_recording_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No recording"
+            android:visibility="gone"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:padding="16dp" />
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete"
+            android:padding="16dp" />
+
+    </LinearLayout>
+</ScrollView>

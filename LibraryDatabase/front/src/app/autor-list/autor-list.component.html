@@ -1,0 +1,24 @@
+<header>
+    <h1>Imię | Nazwisko | Rok urodzenia</h1>   
+</header>  
+<div class="book-list">
+    <app-autor *ngFor="let autor of autors" 
+              [autor]="autor"
+              (edit)="onEdit(autor)"
+              (delete)="onDelete(autor)"
+              (details)="onDetails(autor)">
+    </app-autor>
+</div>
+
+<div class="pagination">
+    <button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+    <span>Page {{ currentPage }} of {{ totalItems / itemsPerPage | ceil }}</span>
+    <button (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === (totalItems / itemsPerPage | ceil)">Next</button>
+    <label for="pageSize">Books per page:</label>
+    <select id="pageSize" (change)="onPageSizeChange($event)">
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="15">15</option>
+    </select>
+    
+  </div>

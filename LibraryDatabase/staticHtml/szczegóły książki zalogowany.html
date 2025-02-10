@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista Książek</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="login-buttons">
+      <button>Wyloguj</button>
+      <button>Ulubione</button>
+    </div>
+    <div class="language-button">
+      <button>English</button>
+      <button>Autorzy</button>
+      <button>Kategorie</button>
+    </div>
+    <h1>Przechowywalnia informacji o książkach</h1>
+    <input type="text" placeholder="Szukaj książki">
+    <select>
+        <option value="">Filtruj kategorię</option>
+        <option value="">Przygodowa</option>
+        <option value="">Horror</option>
+    </select>
+    <button>Wyszukaj</button>
+  </header>
+  <main>
+    <header>
+      <h1>Szczegóły książki</h1>
+    </header>
+    <form class="book-details">
+      <label for="title">Tytuł:</label>
+      <input type="text" id="title" name="title" value="Przygody studenta" readonly>
+      
+      <label for="category">Kategoria:</label>
+      <input type="text" id="category" name="category" value="Horror" readonly>
+      
+      <label for="author">Autor:</label>
+      <input type="text" id="author" name="author" value="PJATK" readonly>
+      
+      <label for="year">Rok wydania:</label>
+      <input type="text" id="year" name="year" value="2023" readonly>
+      
+      <button type="button">Dodaj do ulubionych</button>
+    </form>
+  </main>
+  <footer>
+    Strona umożliwiająca dodawanie książek do polubionych, wyszukiwanie informacji o nich
+  </footer>
+</body>
+</html>

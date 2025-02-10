@@ -1,0 +1,16 @@
+<header>
+    <h1>Szczegóły autora</h1>
+  </header>
+  <form class="book-details" (ngSubmit)="addAutor()">
+    <label for="imie">Imię:</label>
+    <input type="text" id="imie" name="imie" [(ngModel)]="newAutor.imie">
+    
+    <label for="nazwisko">Nazwisko:</label>
+    <input type="text" id="nazwisko" name="nazwisko" [(ngModel)]="newAutor.nazwisko">
+    
+    <label for="rokUrodzenia">Rok urodzenia:</label>
+    <input type="text" id="rokUrodzenia" name="rokUrodzenia" [(ngModel)]="newAutor.rokUrodzenia">
+    
+    
+    <button type="submit">Dodaj Autora</button>
+  </form>

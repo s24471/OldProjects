@@ -1,0 +1,31 @@
+<header>
+    <h1>Szczegóły książki</h1>
+  </header>
+  <form class="book-details">
+    <label for="tytul">Tytuł:</label>
+    <input type="text" id="tytul" name="tytul" [(ngModel)]="book.tytul" [readonly]="!isEditMode">
+
+    <label for="nazwaKategorii">Kategoria:</label>
+    <input *ngIf="!isEditMode" type="text" id="nazwaKategorii" name="nazwaKategorii" [value]="book.nazwaKategorii" readonly>
+    <select *ngIf="isEditMode" id="nazwaKategorii" name="nazwaKategorii" [(ngModel)]="book.kategoriaID">
+      <option *ngFor="let kategoria of kategorie" [value]="kategoria.kategoriaID">{{ kategoria.nazwaKategorii }}</option>
+    </select>
+
+    <label for="autor">Autor:</label>
+    <input *ngIf="!isEditMode" type="text" id="autor" name="autor" [value]="book.imie + ' ' + book.nazwisko + ', ' + book.rokUrodzenia" readonly>
+    <select *ngIf="isEditMode" id="autor" name="autor" [(ngModel)]="book.autorID">
+      <option *ngFor="let autor of autors" [value]="autor.autorID">{{ autor.imie + ' ' + autor.nazwisko }}</option>
+    </select>
+
+    <label for="rokWydania">Rok wydania:</label>
+    <input type="text" id="rokWydania" name="rokWydania" [(ngModel)]="book.rokWydania" [readonly]="!isEditMode">
+
+    <button *ngIf="authService.isLoggedIn() && !isFavorite"  (click)="onFavorite(book)">Dodaj do ulubionych</button>
+    <button *ngIf="authService.isLoggedIn() && isFavorite"  (click)="onRemoveFromFavorites(book)">Usuń z ulubionych</button>  
+    
+    <button *ngIf="authService.isAdmin() && !isEditMode" type="button" (click)="toggleEditMode()">Edytuj</button>
+    <button *ngIf="isEditMode" type="button" (click)="saveChanges()">Akceptuj</button>
+    <button *ngIf="isEditMode" type="button" (click)="cancelEdit()">Anuluj</button>
+    <button *ngIf="authService.isAdmin() && !isEditMode" type="button" (click)="deleteBook(book.ksiazkaID)">Usuń</button>
+  </form>
+  

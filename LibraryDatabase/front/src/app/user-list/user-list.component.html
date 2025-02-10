@@ -1,0 +1,26 @@
+<div>
+    <header>
+      <h1>Login | Email | Imie Nazwisko</h1>   
+    </header>
+    <div class="book-list">
+      <app-user *ngFor="let user of users" 
+                [user]="user"
+                (edit)="onEdit(user)"
+                (delete)="onDelete(user)"
+                (details)="onDetails(user)">
+      </app-user>
+    </div>
+    <div class="pagination">
+      <button (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1">Previous</button>
+      <span>Page {{ currentPage }} of {{ totalItems / itemsPerPage | ceil }}</span>
+      <button (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === (totalItems / itemsPerPage | ceil)">Next</button>
+      <label for="pageSize">Books per page:</label>
+      <select id="pageSize" (change)="onPageSizeChange($event)">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+      </select>
+      
+    </div>
+  </div>
+  

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista Książek</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="login-buttons">
+      <button>Zaloguj</button>
+      <button>Ulubione</button>
+    </div>
+    <div class="language-button">
+      <button>English</button>
+      <button>Autorzy</button>
+      <button>Kategorie</button>
+    </div>
+    <h1>Przechowywalnia informacji o książkach</h1>
+    <input type="text" placeholder="Szukaj książki">
+    <select>
+        <option value="">Filtruj kategorię</option>
+        <option value="">Przygodowa</option>
+        <option value="">Horror</option>
+    </select>
+    <button>Wyszukaj</button>
+  </header>
+  
+  <main>
+    <header>
+      <h1>Podaj dane do rejestracji</h1>
+    </header>
+    <form class="book-details">
+      <label for="title">Login:</label>
+      <input type="text" id="title" name="title" value="login">
+      
+      <label for="category">Hasło:</label>
+      <input type="text" id="category" name="category" value="*****">
+      <label for="category">Powtórz hasło:</label>
+      <input type="text" id="category" name="category" value="*****">
+      <label for="category">Imię:</label>
+      <input type="text" id="category" name="category" value="Filip">
+      <label for="category">Nazwisko:</label>
+      <input type="text" id="category" name="category" value="Gocławski">
+      <label for="category">Email:</label>
+      <input type="text" id="category" name="category" value="*****">
+      
+      <button type="button">Zarejestruj</button>
+    </form>
+  </main>
+  <footer>
+    Strona umożliwiająca dodawanie książek do polubionych, wyszukiwanie informacji o nich
+  </footer>
+</body>
+</html>

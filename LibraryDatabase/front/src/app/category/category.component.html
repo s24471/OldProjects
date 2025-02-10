@@ -1,0 +1,5 @@
+<div class="book">
+    <h2>{{ kategoria.nazwaKategorii }} | {{ kategoria.rokUtworzenia }}</h2>
+    <button (click)="onDetails()">Szczegóły</button>
+    <button *ngIf="authService.isAdmin()" (click)="onDelete()">Usuń</button>
+</div>

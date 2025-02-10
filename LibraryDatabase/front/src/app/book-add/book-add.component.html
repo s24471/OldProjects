@@ -1,0 +1,23 @@
+<header>
+    <h1>Dodaj książkę</h1>
+  </header>
+  <form class="book-details" (ngSubmit)="addBook()">
+    <label for="tytul">Tytuł:</label>
+    <input type="text" id="tytul" name="tytul" [(ngModel)]="newBook.tytul">
+    
+    <label for="nazwaKategorii">Kategoria:</label>
+     <select id="nazwaKategorii" name="nazwaKategorii" [(ngModel)]="newBook.kategoriaID">
+      <option *ngFor="let kategoria of kategorie" [value]="kategoria.kategoriaID">{{ kategoria.nazwaKategorii }}</option>
+    </select>
+
+    <label for="autor">Autor:</label>
+    <select id="autor" name="autor" [(ngModel)]="newBook.autorID">
+        <option *ngFor="let autor of autors" [value]="autor.autorID">{{ autor.imie + ' ' + autor.nazwisko }}</option>
+    </select>
+    
+    <label for="rokWydania">Rok wydania:</label>
+    <input type="text" id="rokWydania" name="rokWydania" [(ngModel)]="newBook.rokWydania">
+
+    <button type="submit">Dodaj książkę</button>
+
+</form>

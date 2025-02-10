@@ -1,0 +1,26 @@
+<header>
+    <h1>Szczegóły Użytkownika</h1>
+</header>
+<form class="book-details">
+
+    <label for="login">login:</label>
+    <input type="text" id="login" name="login" [(ngModel)]="user.login" [readonly]="!isEditMode">
+
+    <label for="email">email:</label>
+    <input type="text" id="email" name="email" [(ngModel)]="user.email" [readonly]="!isEditMode">
+
+    <label for="imie">imie:</label>
+    <input type="text" id="imie" name="imie" [(ngModel)]="user.imie" [readonly]="!isEditMode">
+
+    <label for="nazwisko">nazwisko:</label>
+    <input type="text" id="nazwisko" name="nazwisko" [(ngModel)]="user.nazwisko" [readonly]="!isEditMode">
+
+    <label for="admin">admin:</label>
+    <input type="text" id="admin" name="admin" [(ngModel)]="user.admin" [readonly]="!isEditMode">
+
+    
+    <button *ngIf="!isEditMode" type="button" (click)="toggleEditMode()">Edytuj</button>
+    <button *ngIf="isEditMode" type="button" (click)="saveChanges()">Akceptuj</button>
+    <button *ngIf="isEditMode" type="button" (click)="cancelEdit()">Anuluj</button>
+    <button *ngIf="!isEditMode" type="button" (click)="deleteUser(user.uzytkownikID)">Usuń</button>
+</form>

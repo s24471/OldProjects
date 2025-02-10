@@ -1,0 +1,8 @@
+<div class="book">
+    <h2>{{ book.tytul }} | {{ book.nazwaKategorii }} | {{ book.imie }} {{ book.nazwisko }}</h2>
+    <button *ngIf="authService.isLoggedIn() && !isFavorite"  (click)="onFavorite()">Dodaj do ulubionych</button>
+    <button *ngIf="authService.isLoggedIn() && isFavorite"  (click)="onRemoveFromFavorites()">Usuń z ulubionych</button>
+    <button (click)="onDetails()">Szczegóły</button>
+    <button *ngIf="authService.isAdmin()" (click)="onDelete()">Usuń</button>
+</div>
+  

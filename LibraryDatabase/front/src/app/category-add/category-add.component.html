@@ -1,0 +1,15 @@
+<header>
+    <h1>Szczegóły Kategorii</h1>
+  </header>
+  <form class="book-details" (ngSubmit)="addCategory()">
+  
+    <label for="nazwaKategorii">Kategoria:</label>
+    <input type="text" id="nazwaKategorii" name="nazwaKategorii" [(ngModel)]="newKategoria.nazwaKategorii">
+    
+    <label for="nazwaKategorii">rokUtworzenia:</label>
+    <input type="number" id="rokUtworzenia" name="rokUtworzenia" [(ngModel)]="newKategoria.rokUtworzenia">
+  
+    
+    <button type="submit">Dodaj kategorie</button>
+  </form>
+  

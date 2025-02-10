@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista Książek</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="login-buttons">
+      <button>Wyloguj</button>
+      <button>Ulubione</button>
+    </div>
+    <div class="language-button">
+      <button>English</button>
+      <button>Autorzy</button>
+      <button>Kategorie</button>
+    </div>
+    <h1>Przechowywalnia informacji o książkach</h1>
+    <input type="text" placeholder="Szukaj książki">
+    <select>
+        <option value="">Filtruj kategorię</option>
+        <option value="">Przygodowa</option>
+        <option value="">Horror</option>
+    </select>
+    <button>Wyszukaj</button>
+    <h2>
+    <button>Dodaj kategorię</button>
+    <button>Dodaj książkę</button>
+    <button>Dodaj autora</button>
+    </h2>
+  </header>
+  
+  <main>
+    <header>
+      <h1>Dodaj książkę</h1>
+    </header>
+    <form class="book-details">
+      <label for="title">Tytuł:</label>
+      <input type="text" id="title" name="title">
+
+      <label for="category">Kategoria:</label>
+      <select id="category" name="category">
+        <option value="---">---</option>
+        <option value="Horror">Horror</option>
+        <option value="Przygodowa">Przygodowa</option>
+      </select>
+      
+      <label for="autor">Autor:</label>
+      <select id="autor" name="autor">
+        <option value="---">---</option>
+        <option value="PJATK">PJATK</option>
+        <option value="Ktoś Mądry">Ktoś Mądry</option>
+      </select>
+      
+      <label for="year">Rok wydania:</label>
+      <input type="text" id="year" name="year">
+      
+      <button type="button">Anuluj</button>
+      <button type="button">Zapisz</button>
+    </form>
+  </main>
+  <footer>
+    Strona umożliwiająca dodawanie książek do polubionych, wyszukiwanie informacji o nich
+  </footer>
+</body>
+</html>
