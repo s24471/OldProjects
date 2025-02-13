@@ -1,4 +1,4 @@
-# Distributed Database System
+# 🗄️ Distributed Database System
 A lightweight distributed key-value database implemented in Java as a project for my uni classes.
 
 # How to Use:
