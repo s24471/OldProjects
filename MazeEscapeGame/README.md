@@ -1,4 +1,4 @@
-# Maze Escape Game
+# 🔑 Maze Escape Game
 
 This is a java based 2d game i created in my free time at uni. 
 
