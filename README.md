@@ -33,6 +33,9 @@ A **mobile note-taking app** that supports **text, images, voice recordings, and
 ### 👻 [Pac-Man Clone](PacMan/)  
 A **Java-based Pac-Man game** with **A\* pathfinding AI**, **procedural map generation**, and **power-ups**.
 
+### 🎮 Pokémon Battle Simulator
+A C++ console-based Pokémon-inspired battle game where players choose a team, fight AI-controlled trainers, and evolve their Pokémon. Features turn-based combat, elemental interactions, special attacks, and a progression system with difficulty levels.
+
 ### 🐍 [Snake Game](SnakeGame/)  
 A **classic Snake game** implemented in Java with **smooth movement**, **dynamic board scaling**, and **real-time scoring**.
 
